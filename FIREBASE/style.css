@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap');
+
+
+
+body {
+    margin: 20px auto;
+    font-family: 'poppins';
+    background:#666;
+    color:#fff;
+    text-align: center;
+  }
+   
+ 
+
+
+  .filtered {
+      display: none;
+  }
+  *{
+    margin:0;
+    padding:0;
+  }
+   
+  h3 {
+    font-weight: bold;
+    font-size: 2rem;
+  }
+   
+  p {
+    font-size: 22px;
+  }
+   
+  ul,li{
+    list-style:none;
+  }
+  ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+  }
+  ul li {
+    text-decoration:none;
+    color:#000;
+    background:#ffc;
+    display:block;
+    height:auto;
+    width: 250px;
+    padding:1em;
+      box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+      transform: rotate(-6deg);
+      transition: transform .15s linear;
+      text-align: center;
+
+
+  }
+  ul li{
+    margin:1em;
+  }
+
+  ul li:nth-child(even) {
+    transform:rotate(4deg);
+    position:relative;
+    top:5px;
+  }
+  ul li:nth-child(3n) {
+    transform:rotate(-3deg);
+    position:relative;
+    top:-5px;
+  }
+  ul li:nth-child(5n) {
+    transform:rotate(5deg);
+    position:relative;
+    top:-10px;
+  }
+
+  ul li:hover,ul li:focus{
+    box-shadow:10px 10px 7px rgba(0,0,0,.7);
+    transform: scale(1.25);
+    position:relative;
+    z-index:5;
+  }
+
+  ul li:nth-child(even) {
+    position:relative;
+    top:5px;
+    background:#cfc;
+  }
+  ul li:nth-child(3n) {
+    position:relative;
+    top:-5px;
+    background:#ccf;
+  }
+
+  #deleteButton {
+      background-color:#ED4259;
+      border: none;
+      padding: 10px; 
+      color: white; 
+      border-radius: 7px;
+      margin: 10px;
+  }
+
+  #deleteButton:hover {
+    background-color: #D43B50;
+  }
+
+  #updateButton {
+    background-color:#69CBE0;
+    border: none;
+    padding: 10px; 
+    color: white; 
+    border-radius: 7px;
+    margin: 5px;
+}
+
+#updateButton:hover {
+  background-color: #57A8BA;
+}
+
+.time {
+    font-size: 10px;
+}
+
+.btn-outline-secondary {
+    background-color:white;
+    border: none;
+    padding: 10px; 
+    color: black; 
+    border-radius: 7px;
+    margin: 30px auto;
+}
+
+.btn-outline-secondary:hover {
+    background-color:#eee;
+ 
+}
+.form-style-6{
+	max-width: 400px;
+	margin: 10px auto;
+	
+}
+
+.form-style-6 input[type="text"],
+.form-style-6 textarea,
+.form-style-6 select 
+{
+
+	outline: none;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	width: 100%;
+	background: #fff;
+	margin-bottom: 4%;
+	border: 1px solid #ccc;
+	padding: 3%;
+	color: #555;
+	font: 95% Arial, Helvetica, sans-serif;
+}
+.form-style-6 input[type="text"]:focus,
+.form-style-6 textarea:focus,
+.form-style-6 select:focus
+{
+	box-shadow: 0 0 5px #43D1AF;
+	padding: 3%;
+	border: 1px solid #43D1AF;
+}
+
+
+.form-style-6 input[type="submit"]:hover,
+.form-style-6 input[type="button"]:hover{
+	background: #8fdbc8;
+}
+
+.checkbox-important {
+    font-size: 14px;
+    text-decoration: underline;
+    font-weight: bold;
+    color: deeppink;
+}
+
+#importantFilter {
+  margin-top: 30px;
+}
+

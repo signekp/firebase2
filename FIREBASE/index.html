@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Database Firebase</title>
+</head>
+
+<body>
+
+    <h1>Firebase - Create notes</h1>
+    <div class="container my-5">
+        <div class="col1">
+
+
+            <form class="formAdd">
+                <label for="recipe">Add a new note</label>
+                <p class="time">Use this form to write a note. Do you want to update an exicsting note, use this form
+                    again and click update on the note.</p>
+                <div class="input-group form-style-6">
+                    <input type="text" class="form-control" placeholder="Write a title for the note" id="recipe"
+                        required>
+                    <input type="text" class="form-control" placeholder="Write the note" id="notes" required>
+
+                    <br><input type="checkbox" id="important" name="important" class="checkboxImportant"
+                        value="checkmark">
+                    <label for="importnatnote"> Vigtig note </label>
+
+                    <div class="input-group-append">
+                        <input type="submit" value="Tilføj note" class="btn btn-outline-secondary">
+
+                    </div>
+                    <div>
+
+
+                    </div>
+                </div>
+            </form>
+
+
+            <form class="search form-style-6">
+                <input class="form-control m auto searchform" type="text" name="search" placeholder="search for note"
+                    id="searchID" required>
+            </form>
+
+
+            <ul class="todos">
+
+            </ul>
+
+
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+    <div id="importantFilter">
+
+
+        <label for="search">Se kun vigtige noter</label>
+        <input type="checkbox" class="searchImportant" id="filter_IN">
+        </label>
+
+    </div>
+
+
+
+
+    </div><!-- updateDiv -->
+    </div>
+
+
+    <!-- firesbare biblioteket dets selv, dette skal ind så vi kan bruge firebase i vores applikation -->
+    <!-- men vi har /app, da det kun er core biblioteket som vi skal bruge -->
+    <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-app.js"></script>
+    <!-- Dette er vores firestore bibliotek -->
+    <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-firestore.js"></script>
+
+    <!-- dette er vores script med cores konfigurering -->
+    <script>
+
+        const firebaseConfig = {
+            // identificerer frontend delen hvilken backend vi skal forbindes til 
+            apiKey: "AIzaSyCbVvui6FQ0zRyC_XR0WEZBgR6iknT77tc",
+            authDomain: "fir-10-5a542.firebaseapp.com",
+            projectId: "fir-10-5a542",
+            storageBucket: "fir-10-5a542.appspot.com",
+            messagingSenderId: "822175629752",
+            appId: "1:822175629752:web:a39e9eda4ee59767840f4d"
+        };
+
+        //Her initialiserer/får en reference vi vores firebase med vores config som paramerer
+        // sætter vores firebase på frontend og til at forbinde med vores backend
+        //Starter vores forbindelse med vores backend
+        firebase.initializeApp(firebaseConfig);
+
+        // Initialize/får en reference til vores database og stored den i vores const db. 
+        // dette bruger vi fx. inde i vores javascript fil når vi skal referere til vores  firestore database
+        // vi har adgang til forebase pga. vores firebase-app.js script samme med firestore
+        const db = firebase.firestore();
+
+
+    </script>
+
+
+
+
+
+    <script type="module" src="sandstorm.js"></script>
+
+</body>
+
+</html>
